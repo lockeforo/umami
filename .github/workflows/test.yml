@@ -5,6 +5,7 @@ on: [workflow_dispatch]
 jobs:
   test-secret:
     runs-on: ubuntu-latest
+    environment: Production
     steps:
       - name: Test DATABASE_URL exists
         run: |
