@@ -1,0 +1,12 @@
+jobs:
+  test-secret:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Test DATABASE_URL exists
+        run: |
+          if [ -z "${{ secrets.DATABASE_URL }}" ]; then
+            echo "❌ DATABASE_URL not set"
+            exit 1
+          else
+            echo "✅ DATABASE_URL is set"
+          fi
