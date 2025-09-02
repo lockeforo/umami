@@ -1,12 +1,12 @@
 name: Init Database
 
 on:
-  workflow_dispatch:   # 只手动触发
+  workflow_dispatch:   
 
 jobs:
   init:
     runs-on: ubuntu-latest
-
+    environment: Production
     steps:
       - name: Checkout repo
         uses: actions/checkout@v4
