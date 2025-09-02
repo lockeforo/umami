@@ -1,3 +1,7 @@
+name: Test Secrets
+
+on: [workflow_dispatch]
+
 jobs:
   test-secret:
     runs-on: ubuntu-latest
