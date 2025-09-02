@@ -22,4 +22,4 @@ jobs:
       - name: Run Prisma migrate deploy
         env:
           DATABASE_URL: ${{ secrets.DATABASE_URL }}
-        run: npx prisma migrate deploy
+        run: npx prisma migrate deploy --schema=./db/postgresql/schema.prisma
